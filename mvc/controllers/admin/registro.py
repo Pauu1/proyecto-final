@@ -26,7 +26,6 @@ class Registro:
             phone= formulario.phone
             email = formulario.email 
             password= formulario.password 
-
             user = auth.create_user_with_email_and_password(email,password)  
             local_id =  (user ['localId'])
             data = {
