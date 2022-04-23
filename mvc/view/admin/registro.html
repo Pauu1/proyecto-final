@@ -23,8 +23,16 @@ $def with (message)
             <input type="password" name="password" id="password"><br>
             <br>
             <br>
+            <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select name="nivel" class="form-control" id="input">
+                  <option selected>NIVEL...</option>
+                  <option id="administrador" value="administrador">ADMINISTRADOR</option>
+                  <option id="operador" value="operador">OPERADOR</option>
+                </select>
+              </div>
             <br>
-            <input type="submit" value="registro" class="btn btn-dark"><br>
+            <input type="submit" value="registro" class="btn btn-primary"><br>
             <center>
         </form>
     </body>
