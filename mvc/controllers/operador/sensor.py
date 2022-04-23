@@ -7,11 +7,11 @@ import json
 render = web.template.render('mvc/view/operador', base="layout")
 
 
-class Sensor_temperatura:
+class Sensor:
       def GET(self):
         try:
             firebase = pyrebase.initialize_app(token.firebaseConfig) 
             db = firebase.database() 
-            return render.sensor_temperatura() 
+            return render.sensor() 
         except Exception as error: 
-            print("Error sensor_temperatura.GET: {}".format(error))
+            print("Error sensor.GET: {}".format(error))

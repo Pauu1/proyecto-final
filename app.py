@@ -9,10 +9,10 @@ urls = (
     '/bienvenida_administrador','mvc.controllers.admin.bienvenida_administrador.Bienvenida_administrador',
     '/sensor_temperatura','mvc.controllers.admin.sensor_temperatura.Sensor_temperatura', 
     '/user_view/(.*)','mvc.controllers.admin.user_view.User_view',
-    '/sensor_temperatura','mvc.controllers.operador.sensor_temperatura.Sensor_temperatura',
+    '/sensor','mvc.controllers.operador.sensor.Sensor',
     '/login', 'mvc.controllers.public.login.Login',
      '/registro','mvc.controllers.admin.registro.Registro',
-    '/bienvenida_usuario','mvc.controllers.operador.bienvenida_usuario.Bienvenida_usuario',
+    '/bienvenida_operador','mvc.controllers.operador.bienvenida_operador.Bienvenida_operador',
     '/r_contraseña', 'mvc.controllers.public.r_contraseña.R_contraseña',   
 )
 app = web.application(urls, globals())
