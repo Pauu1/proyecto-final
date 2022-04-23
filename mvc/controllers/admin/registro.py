@@ -26,14 +26,13 @@ class Registro:
             phone= formulario.phone
             email = formulario.email 
             password= formulario.password 
-            nivel= formulario.nivel
+
             user = auth.create_user_with_email_and_password(email,password)  
             local_id =  (user ['localId'])
             data = {
             "name": name,
             "phone": phone,
             "email": email,
-            "nivel": nivel
             }
             results = db.child("users").child(user['localId']).set(data)
             return web.seeother("/bienvenida_administrador") 
