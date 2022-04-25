@@ -13,7 +13,7 @@ urls = (
     '/login', 'mvc.controllers.public.login.Login',
      '/registro','mvc.controllers.admin.registro.Registro',
     '/bienvenida_operador','mvc.controllers.operador.bienvenida_operador.Bienvenida_operador',
-    '/r_contraseña', 'mvc.controllers.public.r_contraseña.R_contraseña',   
+    '/r_contrasena', 'mvc.controllers.public.r_contrasena.R_contrasena',   
 )
 app = web.application(urls, globals())
 

@@ -7,9 +7,9 @@ import json
 render = web.template.render('mvc/view/public', base="layout")
 
 
-class R_contraseña:
+class R_contrasena:
     def GET(self): 
-           return render.r_contraseña() 
+           return render.r_contrasena() 
 
     def POST(self): 
             firebase = pyrebase.initialize_app(token.firebaseConfig) 
