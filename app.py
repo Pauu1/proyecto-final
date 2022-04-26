@@ -11,13 +11,17 @@ urls = (
     '/user_view/(.*)','mvc.controllers.admin.user_view.User_view',
     '/sensor','mvc.controllers.operador.sensor.Sensor',
     '/login', 'mvc.controllers.public.login.Login',
-     '/registro','mvc.controllers.admin.registro.Registro',
+    '/registro','mvc.controllers.admin.registro.Registro',
     '/bienvenida_operador','mvc.controllers.operador.bienvenida_operador.Bienvenida_operador',
-    '/r_contrasena', 'mvc.controllers.public.r_contrasena.R_contrasena',   
+    '/r_contrasena', 'mvc.controllers.public.r_contrasena.R_contrasena', 
+    '/insertar_sucursal', 'mvc.controllers.admin.insertar_sucursal.Insertar_sucursal',  
+ 
+
+     
 )
 app = web.application(urls, globals())
 
 
 if __name__ == "__main__":
-    web.config.debug = False 
+    web.config.debug = True 
     app.run()
