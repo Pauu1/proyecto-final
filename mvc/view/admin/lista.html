@@ -1,0 +1,15 @@
+$def with(users)
+
+<table class="table table-striped table-hover">
+    <thead>
+        <td>Name</td>
+        <td>actualizar</td>
+        <td>borrar</td>
+    </thead>
+    $for user in users:
+        <tr>
+            <td><a href="/lista/$user.key()">$user.val().get("name")</a></td>
+            <td><a href="/actualizar_sucursal/$user.key()">Actualizar</a></td>
+            <td><a href="/eliminar_sucursal/$user.key()">borrar</a></td>
+        </tr>
+</table>

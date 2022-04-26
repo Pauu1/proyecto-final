@@ -16,6 +16,8 @@ urls = (
     '/r_contrasena', 'mvc.controllers.public.r_contrasena.R_contrasena', 
     '/insertar_sucursal', 'mvc.controllers.admin.insertar_sucursal.Insertar_sucursal', 
     '/actualizar_sucursal/(.*)', 'mvc.controllers.admin.actualizar_sucursal.Actualizar_sucursal', 
+    '/lista', 'mvc.controllers.admin.lista.Lista',
+
  
 
      
