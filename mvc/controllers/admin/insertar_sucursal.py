@@ -3,10 +3,9 @@ import pyrebase # libreria para contecarse con firebase
 import firebase_config as token # archivo con la configuracion de firebase
 import json # libreria para manejar el formato JSON
 
-render = web.template.render('mvc/view/admin', base="layout")
+render = web.template.render('mvc/view/admin', base="layout_2")
 
-
-class Registro:
+class Insertar_sucursal:
     def GET(self): 
         try: 
             message = None 
@@ -15,7 +14,7 @@ class Registro:
             message = "Error en el sistema" 
             print("Error insertar_sucursal.GET: {}") 
             return render.insertar_sucursal(message) 
-
+    
 
     def POST(self): 
         try: 
@@ -24,24 +23,24 @@ class Registro:
             db = firebase.database() 
             formulario = web.input() 
             name= formulario.name
-            phone= formulario.phone
+            temperatura= formulario.temperatura
+            humedad = formulario.humedad 
             email = formulario.email 
-            password= formulario.password 
-            nivel= formulario.nivel
+            password = formulario.password 
+            empresa = formulario.empresa
             user = auth.create_user_with_email_and_password(email,password)  
             local_id =  (user ['localId'])
             data = {
             "name": name,
-            "phone": phone,
             "email": email,
-            "nivel": nivel,
+            "temperatura": temperatura,
+            "humedad": humedad,
+            "empresa": empresa,
             }
-            results = db.child("users").child(user['localId']).set(data)
+            results = db.child("sucursales").child(user['localId']).set(data)
             return web.seeother("/bienvenida_administrador") 
         except Exception as error: 
-            formato = json.loads(error.args[1]) # Error en formato JSON
+            formato = json.loads(error.args[1]) 
             error = formato['error'] 
             message = error['message']
-            print("Error Registro.POST: {}".format(message)) 
-            web.setcookie('localID', None, 3600) 
-            return render.insertar_sucursal(message) 
+            return render.registro(message) 

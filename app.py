@@ -14,7 +14,8 @@ urls = (
     '/registro','mvc.controllers.admin.registro.Registro',
     '/bienvenida_operador','mvc.controllers.operador.bienvenida_operador.Bienvenida_operador',
     '/r_contrasena', 'mvc.controllers.public.r_contrasena.R_contrasena', 
-    '/insertar_sucursal', 'mvc.controllers.admin.insertar_sucursal.Insertar_sucursal',  
+    '/insertar_sucursal', 'mvc.controllers.admin.insertar_sucursal.Insertar_sucursal', 
+    '/actualizar_sucursal/(.*)', 'mvc.controllers.admin.actualizar_sucursal.Actualizar_sucursal', 
  
 
      
